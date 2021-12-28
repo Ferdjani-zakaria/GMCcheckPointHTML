@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    font-family:'roboto',sans-serif;
+    font-size: 20px;
+    background-color: rgb(178, 180, 192);
+    
+}
+
+
+footer{
+    font-size: small;
+    text-align: center;
+}
+
+aside {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background-color: lightgray;
+  }
+
+a{
+    text-decoration: none;
+}
+
+h1, p{
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+nav{
+    background-color:rgba(0,0,0,0.5);
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: end;
+    padding-right: 3%;
+    margin: 0;
+}
+
+nav a{
+
+ display: block;
+ padding: 0 10px;
+ font-size: medium;
+ text-transform: uppercase;
+ line-height: 50px;
+}
+
+nav a:hover {
+    background-color: #04AA6D;
+    color: black;
+    
+  }
+  
+
+.about, .resume{
+    background-color: lightcyan;
+}
+
+.about, .work, .resume, .more{
+    margin: 15px 0px;
+}
+
+.more{
+    text-align: center;
+}
+
+
+.more label{
+    display: inline-block;
+    text-align: left;
+    width: 12%;
+}
+
+.more input{
+    border-radius: 5px;
+}
+
+.more textarea{
+    margin: 1% 12.5%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
