@@ -8,7 +8,7 @@
 a{
     text-decoration: none;
     color: rgb(171, 171, 171);
-    font-size: 20px;
+    font-size: 16px;
 }
 
 h1{
@@ -16,11 +16,28 @@ h1{
 }
 
 p{
-    font-size: 17px;
+    font-size: 16px;
 }
 
 ul{
     list-style-type: none;
+}
+
+button{
+    background-color: blue;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+    border: none;
+}
+
+button:hover{
+    background-color: darkblue;
+    
 }
 
 select{
@@ -46,7 +63,7 @@ section{
     width: 100%;
     z-index: 3;
     background-color: rgba(255, 255, 255, .97);
-    box-shadow: 0 -2px 10px 0;
+    box-shadow: -3px -5px 10px 0;
 }
 
 .top-bar{
@@ -209,25 +226,150 @@ section{
 }
 
 
-.archievement{
-    display: flex;
+.achivements{
+    background-color: #f8f0f0;
+    max-width: 100%;
+    overflow: hidden;
 }
 
+.achivements-container{
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 65px;
+    gap: 73px;
+    height: 580px;
+}
+
+.left-achi{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 50%;
+}
+
+.left-achi p{
+    color: #00b39b;
+    line-height: 20px;
+    font-weight: 100;
+}
+
+.left-achi h1{
+    font-size: 38px;
+    font-weight: 200;
+}
+
+.left-achi img{
+
+    height: 400px;
+    margin-top: 40px;
+    margin-left: -120px;
+    margin-right: 130px;
+}
+
+.right-achi{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 50%;
+}
+
+.it{
+    text-align: center;
+    padding: 12px;
+    width: 45%;
+    background-color: white;
+    height: 45%;
+    padding-top: 30px;
+}
+.it h2{
+    margin: 10px;
+    color: rgb(204, 191, 191);
+
+}
+
+.it p{
+    font-size: 14px;
+    line-height: 17px;
+}
+
+
+.item2{
+    margin-top: -30px;
+}
+
+.item4{
+    margin-top: -40px;
+}
 
 .bottom-head{
     text-align: center;
 }
 
 .images{
+    overflow: hidden;
     margin-top: 40px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 350px 350px 350px;
+    gap: 20px;
+}
+
+.bottom-head-txt{
+    text-align: center;
+    line-height: 30px;
+    width: 50%;
+    margin: 30px auto;
+}
+
+.bottom-head-txt h1{
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.images img{
+    margin-bottom: 15px;
+}
+
+.aa{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.block:hover{
+    box-shadow: 0px 1px 4px -1px gray;
+    border-radius: 5px;
 }
 
 .toJoinUs , footer{
     text-align: center;
     width: 50%;
-    margin: auto;
+    margin: 15px auto;
+    borde
 }
 
+.toJoinUs{
+    margin-bottom: 150px;
+}
+
+.toJoinUs h1{
+    margin-bottom: 35px;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 7px;
+    padding: 12px 20px;
+}
+
+.btn:hover{
+    background-color: darkblue;
+}
