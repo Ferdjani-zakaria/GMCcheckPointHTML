@@ -50,7 +50,10 @@ function slideToRight(){
     imageNum++;
     slide[imageNum].style.display = "flex";
 }
+
 // *****************************************************************
+
+
 function openCart() {
     document.getElementById('cart')
 }
