@@ -214,6 +214,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
    
 }
 
@@ -223,4 +224,32 @@ body{
 
     .darkFilter{
       display: block;
+    }
+
+    .myCartPage{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin: 9vh 15px auto;
+        background-color: white;
+        width: 365px;
+        height: 0px;
+        max-height: 50vh;
+        z-index: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 5px 20px 0px #5a4141;
+    
+    }
+    .topCartPage{
+        border-bottom: 1px solid gray;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+    .botCartPage{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 10px;
+        overflow-y: scroll;
     }
