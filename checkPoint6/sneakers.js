@@ -116,17 +116,15 @@ function addingItem(){
     const supBtn = document.createElement("img");
     supBtn.src ="images/icon-delete.svg";
     supBtn.style.height="20px";
-    supBtn.addEventListener("onClick",deleteItem);
+    supBtn.addEventListener("click", ()=>{
+      console.log("removed");
+      supBtn.parentElement.remove()
+    });  
     newItem.appendChild(supBtn);
 
     const botCart = document.getElementById('botCartPage').getElementsByTagName("div");
     for (let i=0;i<botCart.length;i++){
       botCart[i].getElementsByTagName("img")[1].setAttribute("id","Num"+i);
-      let e = `Num${i}`
-      document.getElementById(e).addEventListener("onClick",function deleteItem(e){
-        document.getElementById(e).parentNode.parentNode.appendChild(document.getElementById(e).parentNode)
-        console.log('hello')
-      });
     }
    
     
