@@ -1,31 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 /* #69707D  cart original color*/
-/* next time i should start with this */
-/* *{
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
-
-body{
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 16px;
-    margin: 0;
 }
-
 
 
 .mainNav{
     display: flex;
     justify-content: space-between;
-    gap: 100px;
-    margin: 15px 15px 20px;
-
+    padding: 1vh 1vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.97);
+    width: 100%;
+    z-index: 4;
 }
 .mainNav div{
     display: flex;
     gap: 15px;
     justify-content: space-around;
+    align-items: center;
 }
 
 #nav-right{
@@ -34,6 +33,9 @@ body{
     align-items: center;
 }
 
+.cart{
+    cursor: pointer;
+}
 /* #nav-right{
     display: flex;
     float: right;
@@ -44,8 +46,8 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat ;
-    height: 40vh;
-    width: 100%;
+    height: 35vh;
+    margin-top: 6vh;
 }
 
 .slide-image1{
@@ -67,8 +69,10 @@ body{
     padding: 10px;
     position: absolute;
     right: 0;
-    top: 25%;
+    top: 20%;
     margin-right: 15px;
+    z-index: 2;
+    cursor: pointer;
 }
 #slide-bar-btnRight{
     border: none;
@@ -77,8 +81,10 @@ body{
     padding: 10px;
     position: absolute;
     left: 0;
-    top: 25%;
+    top: 20%;
     margin-left: 15px;
+    z-index: 2;
+    cursor: pointer;
 }
 
 
@@ -96,19 +102,47 @@ body{
 }
 
 .down-section{
-    margin: 15px;
+    margin: auto;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .down-section-up h6{
     color: hsl(26, 100%, 55%);
+    margin: 1rem;
+    font-size: 18px;
 }
+
+.down-section-up p{
+    font-size: 18px;
+    margin: 1rem;
+    line-height: 23px;
+}
+.div-head{
+    margin: 1rem;
+}
+.div-head h1{
+    font-size: 28px;
+}
+
+.down-section-down{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 
 .price{
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 30px 0;
     justify-content: space-between;
-    gap: 50px;
+    width: 95%;
 
 }
 
@@ -119,14 +153,21 @@ body{
     gap: 25px;
 }
 
+#realPrice h2{
+    font-size: 30px;
+}
+
 #remise{
     font-weight: bold;
     color: hsl(26, 100%, 55%);
     background-color:hsl(25, 100%, 94%) ;
+    font-size: 18px;
 }
 
 #noRemise{
     text-decoration: line-through;
+    color: #5658;
+    font-size: 20px;
 }
 
 .nOfSneakers{
@@ -135,8 +176,9 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 65px;
-    height: 40px;
-
+    height: 60px;
+    /* padding: 0 15px; */
+    width: 95%;
 }
 
 .nOfSneakers input{
@@ -144,6 +186,8 @@ body{
     background-color:hsl(25, 100%, 94%) ;
     color: hsl(26, 100%, 55%);
     font-weight: bold;
+    border-radius: 10px;
+    width: 60%;
 }
 
 #number{
@@ -151,10 +195,23 @@ body{
     color: black;
 }
 
+
+
+#minus{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#plus{
+    font-size: 40px;
+    cursor: pointer;
+}
+
 .btnAddToCart{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 95%;
 }
 
 .btnAddToCart button{
@@ -165,9 +222,11 @@ body{
     border: none;
     margin: 20px 0;
     padding: 10px;
-    border-radius: 6px; ;
+    border-radius: 10px; ;
     background-color: hsl(26, 100%, 55%);
+    cursor: pointer;
 }
+
 
 .div-head h1{
     margin: 0;
@@ -214,7 +273,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 9;
    
 }
 
@@ -229,24 +288,33 @@ body{
     .myCartPage{
         display: flex;
         flex-direction: column;
-        position: absolute;
-        justify-content: space-evenly;
+        position: fixed;
+        /* justify-content: space-evenly; */
         margin: 9vh 15px auto;
         background-color: white;
         width: 365px;
         height: 0px;
         max-height: 50vh;
-        z-index: 1;
+        z-index: 5;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0px 5px 20px 0px #5a4141;
+        top: 0;
+        right: 0;
     
     }
     .topCartPage{
         border-bottom: 1px solid gray;
         padding-left: 15px;
         padding-right: 15px;
+        height: 50px;
 
+    }
+
+    .topCartPage h3{
+        font-size: 23px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .botCartPage{
         display: flex;
@@ -255,8 +323,13 @@ body{
         padding-left: 15px;
         padding-right: 15px;
         margin-bottom: 10px;
+        margin-top: 15px;
         overflow-y: scroll;
     }
+    #cartEmpty{
+        font-size: 30px;
+    }
+    
 
     
 
@@ -270,7 +343,8 @@ body{
         font-size: 20px;
         color: white;
         text-align: center;
-        margin-bottom: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
         border: none;
         background-color: hsl(26, 100%, 55%);
     }

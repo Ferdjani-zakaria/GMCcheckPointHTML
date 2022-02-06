@@ -34,7 +34,7 @@
             <div id="nav-left">
                 
                 <div id="image-icon">
-                    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="images/icon-menu.svg" alt="menu" ></span>
+                    <span style="font-size:30px;cursor:pointer; display: flex;" onclick="openNav()"><img src="images/icon-menu.svg" alt="menu" ></span>
                 </div>
                 
                 <img src="images/logo.svg" alt="logo">
@@ -65,25 +65,26 @@
                 </div>
                 <p>these low-profile sneakers are your perfect casual wear campanion. Featuring a durable rubber outer sole. they'll withstand everything the weather can offer.</p>
             </div>
-            <div class="price">
-                <div id="with-remise">
-                    <div id="realPrice"><h2>$125.00</h2></div>
-                    <div id="remise">50%</div>
+            <div class="down-section-down">
+                <div class="price">
+                    <div id="with-remise">
+                        <div id="realPrice"><h2>$125.00</h2></div>
+                        <div id="remise">50%</div>
+                    </div>
+                    <div id="noRemise">$250.00</div>
                 </div>
-                
-                <div id="noRemise">$250.00</div>
+                <div class="nOfSneakers">
+                    <!-- <form action=""> -->
+                        <input class="btnChange" type="button" id="minus" value="-">
+                        <input type="number" id="number" value =0>
+                        <input class="btnChange" type="button" id="plus" value="+">
+                    <!-- </form> -->
+                </div>
+                <div class="btnAddToCart">
+                    <button id="btnAdd"><img src="images/icon-cart.svg" alt="" > Add to cart</button>
+                </div>
             </div>
-            <div class="nOfSneakers">
-                <!-- <form action=""> -->
-                    <input class="btnChange" type="button" id="minus" value="-">
-                    <input type="number" id="number" value =0>
-                    <input class="btnChange" type="button" id="plus" value="+">
-                <!-- </form> -->
-
-            </div>
-            <div class="btnAddToCart">
-                <button id="btnAdd"><img src="images/icon-cart.svg" alt="" > Add to cart</button>
-            </div>
+            
         </section>
     </section>
     

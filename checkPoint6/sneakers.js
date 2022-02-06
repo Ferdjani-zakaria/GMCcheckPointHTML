@@ -73,7 +73,7 @@ function changeFunc(e){
 //***********************************************Cart part************************************************
 function openCart() {
   if(document.getElementById("myCartPage").style.height == "0px"){
-    document.getElementById("myCartPage").style.minHeight = "300px";
+    document.getElementById("myCartPage").style.minHeight = "240px";
     document.getElementById("myCartPage").style.height = "auto";
   }
   else {
@@ -129,7 +129,7 @@ function addingItem(){
     });  
     newItem.appendChild(supBtn);
 
-    
+    numOfSneakers.value = 0;
     // for (let i=0;i<botCart.length;i++){
     //   botCart[i].getElementsByTagName("img")[1].setAttribute("id","Num"+i);
     // }
