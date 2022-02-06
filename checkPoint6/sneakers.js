@@ -86,16 +86,21 @@ function openCart() {
 // ***************Adding items to the Cart part*******************************
 
 document.getElementById("btnAdd").addEventListener("click",addingItem);
-
+const botCart = document.getElementById('botCartPage').getElementsByTagName("div");
+const btnCart = document.getElementById('buy')
+if (botCart.length == 0){
+  document.getElementById('buy').style.display = "none"
+  document.getElementById('cartEmpty').style.display = "flex"
+}
 function addingItem(){
-  if (parseInt(numOfSneakers.value) !== 0){
+  if (parseInt(numOfSneakers.value) > 0){
     document.getElementById('cartEmpty').style.display = "none"
     let fullPrice = parseInt(document.getElementById("realPrice").innerText.slice(1))*parseInt(document.getElementById("number").value);
     const newItem = document.createElement('div');
     newItem.style.display = "flex";
     newItem.style.alignItems = "center";
     newItem.style.gap = "10px"
-    newItem.style.marginBottom = "20px";
+    newItem.style.marginBottom = "5px";
     newItem.style.marginTop = "10px";
 
     const newImg = document.createElement('img');
@@ -111,28 +116,39 @@ function addingItem(){
     paragraph.appendChild(text);
     paragraph.style.fontSize = "18px";
     newItem.appendChild(paragraph);
-    itemContainer.appendChild(newItem);
-    
+    // itemContainer.appendChild(newItem);
+    btnCart.parentNode.insertBefore(newItem, btnCart)
+
     const supBtn = document.createElement("img");
     supBtn.src ="images/icon-delete.svg";
     supBtn.style.height="20px";
     supBtn.addEventListener("click", ()=>{
       console.log("removed");
       supBtn.parentElement.remove()
+      emptyCart()
     });  
     newItem.appendChild(supBtn);
 
-    const botCart = document.getElementById('botCartPage').getElementsByTagName("div");
-    for (let i=0;i<botCart.length;i++){
-      botCart[i].getElementsByTagName("img")[1].setAttribute("id","Num"+i);
-    }
-   
+    
+    // for (let i=0;i<botCart.length;i++){
+    //   botCart[i].getElementsByTagName("img")[1].setAttribute("id","Num"+i);
+    // }
+    
+    emptyCart()
     
   }
 }
 // document.getElementById('botCartPage').getElementsByTagName("div")
 
-function deleteItem(e){
-      document.getElementById(e).parentNode.parentNode.appendChild(document.getElementById(e).parentNode)
-      console.log('hello')
-    }
+function emptyCart(){
+  if (botCart.length == 0){
+    document.getElementById('buy').style.display = "none"
+    document.getElementById('cartEmpty').style.display = "block"
+  }
+   else if(botCart.length !== 0){
+    document.getElementById('buy').style.display = "block"
+    document.getElementById('cartEmpty').style.display = "none"
+  }
+}
+
+

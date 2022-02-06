@@ -230,6 +230,7 @@ body{
         display: flex;
         flex-direction: column;
         position: absolute;
+        justify-content: space-evenly;
         margin: 9vh 15px auto;
         background-color: white;
         width: 365px;
@@ -248,8 +249,28 @@ body{
 
     }
     .botCartPage{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
         padding-left: 15px;
         padding-right: 15px;
         margin-bottom: 10px;
         overflow-y: scroll;
+    }
+
+    
+
+    #buy{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 0;
+        border-radius: 40px;
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        margin-bottom: 0;
+        border: none;
+        background-color: hsl(26, 100%, 55%);
     }
