@@ -1,95 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sneakers.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sneakers.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <section id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Collection</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="#">Collection</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </section>
     <section id="myCartPage" class="myCartPage">
-        <div class="topCartPage">
-            <h3>Cart</h3>
-        </div>
-        <div class="botCartPage" id="botCartPage">
-            <p id="cartEmpty" style="font-size: 25px; font-weight: 300; text-align: center; display: flex; justify-content: center;">Your cart is empty</p>
-            <button id="buy">Confirm your purchase</button>
-        </div>
-        
+      <div class="topCartPage">
+        <h3>Cart</h3>
+      </div>
+      <div class="botCartPage" id="botCartPage">
+        <p
+          id="cartEmpty"
+          style="
+            font-size: 25px;
+            font-weight: 300;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          Your cart is empty
+        </p>
+        <button id="buy">Confirm your purchase</button>
+      </div>
     </section>
 
     <section id="homePage">
-        <div id="fil" class="filter lightFilter"></div>
-        <nav class="mainNav">
-            <div id="nav-left">
-                
-                <div id="image-icon">
-                    <span style="font-size:30px;cursor:pointer; display: flex;" onclick="openNav()"><img src="images/icon-menu.svg" alt="menu" ></span>
-                </div>
-                
-                <img src="images/logo.svg" alt="logo">
-            </div>
-            <div id="nav-right">
-                <span class="cart" onclick="openCart()"><img src="images/icon-cart full.svg" alt="cart"></span>
-                <img src="images/image-avatar.png" alt="avatar" id="image-avatar">
-            </div>
-            
-        </nav>
-        
-    
-        <section id="slide">
-            <img src="images/icon-previous.svg" alt="" id="slide-bar-btnRight">
-            <div class="slide slide-image1"></div>
-            <div class="slide slide-image2"></div>
-            <div class="slide slide-image3"></div>
-            <img src="images/icon-next.svg" alt="" id="slide-bar-btnLeft">
-    
-        </section>
+      <div id="fil" class="filter lightFilter"></div>
+      <nav class="mainNav">
+        <div id="nav-left">
+          <div id="image-icon">
+            <span
+              style="font-size: 30px; cursor: pointer; display: flex"
+              onclick="openNav()"
+              ><img src="images/icon-menu.svg" alt="menu"
+            /></span>
+          </div>
 
-        <section class="down-section">
-            <div class="down-section-up">
-                <h6>SNEAKER COMPANY</h6>
-                <div class="div-head">
-                    <h1>Fall Limited Edition</h1>
-                    <h1>Sneakers</h1>
-                </div>
-                <p>these low-profile sneakers are your perfect casual wear campanion. Featuring a durable rubber outer sole. they'll withstand everything the weather can offer.</p>
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+        <div id="nav-right">
+          <span class="cart" onclick="openCart()"
+            ><img src="images/icon-cart full.svg" alt="cart"
+          /></span>
+          <img src="images/image-avatar.png" alt="avatar" id="image-avatar" />
+        </div>
+      </nav>
+
+      <section id="slide">
+        <img src="images/icon-previous.svg" alt="" id="slide-bar-btnRight" />
+        <div class="slide slide-image1"></div>
+        <div class="slide slide-image2"></div>
+        <div class="slide slide-image3"></div>
+        <img src="images/icon-next.svg" alt="" id="slide-bar-btnLeft" />
+      </section>
+
+      <section class="down-section">
+        <div class="down-section-up">
+          <h6>SNEAKER COMPANY</h6>
+          <div class="div-head">
+            <h1>Fall Limited Edition</h1>
+            <h1>Sneakers</h1>
+          </div>
+          <p>
+            these low-profile sneakers are your perfect casual wear campanion.
+            Featuring a durable rubber outer sole. they'll withstand everything
+            the weather can offer.
+          </p>
+        </div>
+        <div class="down-section-down">
+          <div class="price">
+            <div id="with-remise">
+              <div id="realPrice"><h2>$125.00</h2></div>
+              <div id="remise">50%</div>
             </div>
-            <div class="down-section-down">
-                <div class="price">
-                    <div id="with-remise">
-                        <div id="realPrice"><h2>$125.00</h2></div>
-                        <div id="remise">50%</div>
-                    </div>
-                    <div id="noRemise">$250.00</div>
-                </div>
-                <div class="nOfSneakers">
-                    <!-- <form action=""> -->
-                        <input class="btnChange" type="button" id="minus" value="-">
-                        <input type="number" id="number" value =0>
-                        <input class="btnChange" type="button" id="plus" value="+">
-                    <!-- </form> -->
-                </div>
-                <div class="btnAddToCart">
-                    <button id="btnAdd"><img src="images/icon-cart.svg" alt="" > Add to cart</button>
-                </div>
+            <div id="noRemise">$250.00</div>
+          </div>
+          <div class="nOfSneakersAndBuyBtn">
+            <div class="nOfSneakers">
+                <!-- <form action=""> -->
+                <input class="btnChange" type="button" id="minus" value="-" />
+                <input type="number" id="number" value="0" />
+                <input class="btnChange" type="button" id="plus" value="+" />
+                <!-- </form> -->
+              </div>
+              <div class="btnAddToCart">
+                <button id="btnAdd">
+                  <img src="images/icon-cart.svg" alt="" /> Add to cart
+                </button>
+              </div>
             </div>
-            
-        </section>
+          </div>
+          
+      </section>
     </section>
-    
 
     <script src="sneakers.js"></script>
-
-</body>
+  </body>
 </html>
